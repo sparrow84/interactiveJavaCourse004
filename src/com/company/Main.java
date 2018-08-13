@@ -57,6 +57,25 @@ public class Main {
         for (Worker w : workerArray) {
             if (w.getAge() > 40) w.printWorker();
         }
+
+// Task 6 - 10
+
+        Dog dog1 = new Dog("Шарик");
+        Cat cat1 = new Cat("Васька");
+
+        dog1.jump(1);
+        dog1.run(50);
+        dog1.swim(10);
+
+        dog1.jump(200);
+        dog1.run(5000);
+        dog1.swim(1000);
+
+        cat1.jump(1.5);
+        cat1.run(10);
+
+        cat1.jump(10.5);
+        cat1.run(100);
     }
 }
 
