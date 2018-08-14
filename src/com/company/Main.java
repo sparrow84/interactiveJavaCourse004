@@ -44,22 +44,27 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Cat[] cat = new Cat[3];
 
-        Cat cat1 = new Cat("Васька");
-        Cat cat2 = new Cat("Рыжик");
-        Cat cat3 = new Cat("Снежок");
+        cat[0] = new Cat("Васька");
+        cat[1] = new Cat("Рыжик");
+        cat[2] = new Cat("Снежок");
 
         Bowl bowl = new Bowl();
+        boolean res;
+
+        do {
+            res = false;
+            for (Cat kitty : cat) {
+                if (!kitty.eat(bowl)) {
+                    res = true;
+                    bowl.fillBowl();
+                }
+            }
+        } while (res);
 
         boolean result;
 
-        do {
-
-            result = cat1.eat(bowl);
-            result = cat2.eat(bowl);
-            result = cat3.eat(bowl);
-
-        } while (!cat1.eat(bowl) && !cat2.eat(bowl) && !cat1.eat(bowl));
 
     }
 }

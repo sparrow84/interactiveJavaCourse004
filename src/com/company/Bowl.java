@@ -3,7 +3,7 @@ package com.company;
 public class Bowl {
 
     private double maxFoodCount = 500;
-    private double foodCount;
+    private double foodCount = maxFoodCount;
 
     public double getFoodCount() {
         return foodCount;
@@ -15,14 +15,6 @@ public class Bowl {
 
     public void fillBowl() {
         foodCount = maxFoodCount;
+        System.out.println("Миска наполнена едой." + " (кол-во: " + foodCount + ")");
     }
-
-    public double feed(double appetite) {
-
-
-
-        return 0;
-    }
-
-
 }
