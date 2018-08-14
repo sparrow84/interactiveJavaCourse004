@@ -19,7 +19,6 @@ public class Cat extends Animal implements Runable, Jumpable  {
         maxJump = 400 - new Random().nextInt(200);
         maxJump = (40 - new Random().nextInt(20)) / 10;
     }
-
     @Override
     public void jump(double height) {
         if (height <= maxJump) {
@@ -28,7 +27,6 @@ public class Cat extends Animal implements Runable, Jumpable  {
             System.out.println("Cat " + this.getName() + " jump: " + false + " (max: " + maxJump + ")");
         }
     }
-
     @Override
     public void run(double range) {
         if (range <= maxRun) {
