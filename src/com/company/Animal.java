@@ -6,6 +6,7 @@ public abstract class Animal {
     private int maxJump;
     private int maxRun;
     private int maxSwim;
+    private double satiety; // Если 0 значит животное сытое
 
     public String getName() {
         return name;
@@ -37,5 +38,13 @@ public abstract class Animal {
 
     public void setMaxSwim(int maxSwim) {
         this.maxSwim = maxSwim;
+    }
+
+    public double getSatiety() {
+        return satiety;
+    }
+
+    public void setSatiety(double satiety) {
+        this.satiety = satiety;
     }
 }

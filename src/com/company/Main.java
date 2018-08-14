@@ -44,38 +44,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-// Task 4
-        Worker[] workerArray = new Worker[6];
 
-        workerArray[0] = new Worker("Каценеленбоген Борис Эрнстович",  "Генеральный директор",   "Kacenelenbogen@yopmail.com","32452345345",1000000,24);
-        workerArray[1] = new Worker("Шишкарёв Архип Святославович",    "Исполнительный директор","SHishkaryov@yopmail.com",   "56785678567",100000, 31);
-        workerArray[2] = new Worker("Койначёнока Диана Афанасиевна",   "Финансовый директор",    "Kojnachyonoka@yopmail.com", "13451234324",10000,  35);
-        workerArray[3] = new Worker("Курбонмамадов Афанасий Федорович","Коммерческий директор",  "Kurbonmamadov@yopmail.com", "45634756878",1000,   56);
-        workerArray[4] = new Worker("Каменчука Евдокия Степановна",    "Директор по персоналу",  "Kamenchuka@yopmail.com",    "06879567845",100,    42);
-        workerArray[5] = new Worker("Ядыкин Герман Эдуардович",        "Уборщик",                "YAdykin@yopmail.com",       "43356786887",10,     84);
-
-        for (Worker w : workerArray) {
-            if (w.getAge() > 40) w.printWorker();
-        }
-
-// Task 6 - 10
-
-        Dog dog1 = new Dog("Шарик");
         Cat cat1 = new Cat("Васька");
+        Cat cat2 = new Cat("Рыжик");
+        Cat cat3 = new Cat("Снежок");
 
-        dog1.jump(1);
-        dog1.run(50);
-        dog1.swim(10);
+        Bowl bowl = new Bowl();
 
-        dog1.jump(200);
-        dog1.run(5000);
-        dog1.swim(1000);
+        boolean result;
 
-        cat1.jump(1.5);
-        cat1.run(10);
+        do {
 
-        cat1.jump(10.5);
-        cat1.run(100);
+            result = cat1.eat(bowl);
+            result = cat2.eat(bowl);
+            result = cat3.eat(bowl);
+
+        } while (!cat1.eat(bowl) && !cat2.eat(bowl) && !cat1.eat(bowl));
+
     }
 }
 
